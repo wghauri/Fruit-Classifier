@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link href="{{ url_for('static', filename='style.css') }}"
+              rel="stylesheet" /> 
+        <title>iFruit</title>
+    </head>
+    <body>
+        <h1>iFruit</h1> 
+        <h2 class="text-center">Fruit Classifier</h2>
+        <h3>Welcome to iFruit! This fruit classifying model will try to 
+            predict and classify the fruit being shown on the webcam!
+            Just click the button below to start your webcam, and show
+            the camera a fruit! The model will try to identify the 
+            fruit being shown in real time! Have fun!
+        </h3>
+
+        <img src="{{ url_for('video_feed') }}">
+
+        <form action="/">
+            <input type="submit" value="Start Webcam" />
+        </form>
+
+        {% if classification %}
+            <p>Predicted Fruit: {{classification}}</p>
+        {% endif %}
+
+        <!-- <p></p>
+        <ul>
+            <li></li>
+        </ul> -->
+    </body>
+</html>

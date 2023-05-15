@@ -1,0 +1,54 @@
+body{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: palegreen;
+}
+
+img{
+        max-height: 400px;
+        margin-left: 8px;
+}
+
+h1{
+    font-size: 30px;
+    text-align: left;
+    color: green;
+    background-color: white;
+    border-bottom: 2px solid olivedrab;
+    /* color: floralwhite; */
+    margin-left: 10px;
+}
+
+h2{
+    font-size: 35px;
+    text-align: center;
+    background-color: white;
+    color: black;
+    /* border-bottom: 3px solid chartreuse; */
+    width: 100%;
+    /* padding: 10px; */
+    margin: 0px;
+}
+
+h3{
+    font-size: 20px;
+    background-color: white;
+    color: black;
+    /* border-bottom: 3px limegreen; */
+    padding: 20px;
+}
+
+input{
+    font-size: 40px;
+    text-align: center;
+    color: darkcyan;
+    background-color:greenyellow;
+    border: 2px solid darkcyan;
+    padding: 20px;
+    margin-top: 15px;
+}
+
+p{
+    font-size: 15px;
+    color: pink;
+}
