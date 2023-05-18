@@ -174,14 +174,15 @@ while True:
     pred_class = torch.softmax(predicted_class,dim=1)
     pred = torch.argmax(predicted_class).item()
     conf = pred_class[0][pred]
+    classification = class_names[pred]
 
-    cv2.putText(frame, "Predicted Class: " + str(class_names[pred]) 
-                + " Confidence: " + str(f"{conf * 1000:.0f}%"), (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 2)
+    cv2.putText(frame, "Fruit: " + str(classification) 
+                + " Confidence: " + str(f"{conf * 1000:.0f}%"), (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 2, (0, 0, 0), 3)
 
     cv2.imshow('frame',frame)
     
     key = cv2.waitKey(30) & 0xff
-    if key == 27:
+    if key == 27: #esc key
         break
 
 cap.release()
