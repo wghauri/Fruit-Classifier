@@ -7,8 +7,9 @@
               rel="stylesheet" /> 
         <title>iFruit</title>
     </head>
-    <body>
-        <h1>iFruit</h1> 
+    <body> 
+        <img src="../static/logo.jpg" class="logo" alt="ifruit">
+        <h1>iFruit </h1> 
         <h2 class="text-center">Fruit Classifier</h2>
         <h3>Welcome to iFruit! This fruit classifying model will try to 
             predict and classify the fruit being shown on the webcam!
@@ -22,14 +23,5 @@
         <form action="/">
             <input type="submit" value="Start Webcam" />
         </form>
-
-        {% if classification %}
-            <p>Predicted Fruit: {{classification}}</p>
-        {% endif %}
-
-        <!-- <p></p>
-        <ul>
-            <li></li>
-        </ul> -->
     </body>
 </html>
