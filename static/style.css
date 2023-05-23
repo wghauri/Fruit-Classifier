@@ -1,54 +1,78 @@
 body{
     display: flex;
     flex-wrap: wrap;
-    background-color: palegreen;
+    margin: 0px;
+    background-color: rgb(233, 70, 70);
 }
 
-img{
-        max-height: 400px;
-        margin-left: 8px;
-}
+.logo{
+    src: url(./logo.jpg);
+    max-height: 100px;
+    max-width: 100px;
+    border-top: 0px;
+    border-bottom: 0px;
+    border-right: 1px solid white;
+    border-left: 0px;
+
+}    
 
 h1{
-    font-size: 30px;
-    text-align: left;
-    color: green;
-    background-color: white;
-    border-bottom: 2px solid olivedrab;
-    /* color: floralwhite; */
-    margin-left: 10px;
+    /* width: 646px; */
+    font-size: 75px;
+    color: white;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 170px;
+    padding-top: 12px;
+    /* border: 1px solid black; */
 }
 
 h2{
     font-size: 35px;
     text-align: center;
-    background-color: white;
+    background-color:lightpink;
+    border-top: 1px solid white;
+    /* background-color: rgb(164, 245, 164); */
     color: black;
-    /* border-bottom: 3px solid chartreuse; */
     width: 100%;
-    /* padding: 10px; */
+    padding-top: 10px;
     margin: 0px;
 }
 
 h3{
     font-size: 20px;
-    background-color: white;
+    line-height: 28px;
+    background-color: pink;
+    /* background-color: rgb(164, 245, 164); */
+    border-bottom: 1px solid white;
     color: black;
-    /* border-bottom: 3px limegreen; */
     padding: 20px;
+    margin: 0px;
+}
+
+img{
+        max-height: 405px;
+        border-top: 27px solid lightpink;
+        border-bottom: 26px solid lightpink;
+        border-left: 15px solid lightpink;
+        border-right: 15px solid lightpink;
 }
 
 input{
-    font-size: 40px;
+    font-size: 20px;
+    width: 711.9px;
     text-align: center;
-    color: darkcyan;
-    background-color:greenyellow;
-    border: 2px solid darkcyan;
-    padding: 20px;
-    margin-top: 15px;
-}
-
-p{
-    font-size: 15px;
-    color: pink;
+    border: 0.5rem outset pink;
+    /* box-shadow: 0 0 0 1.2rem rgb(233, 70, 124); */
+    box-shadow: 0 0 0 1.2rem palevioletred;
+    font: bold 1rem sans-serif;
+    margin-top: 1.19rem;
+    margin-left: 1.18rem;
+    padding-top: 0.9rem;
+    padding-bottom: 1rem;
+    padding-right: 0.9rem;
+    padding-left: 0.9rem;
+    color: black;
+    /* color: rgb(109, 24, 79); */
+    background-color:white;
 }
