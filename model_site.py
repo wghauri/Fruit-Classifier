@@ -6,17 +6,13 @@ from torch.utils.data import DataLoader
 from torchvision import datasets, transforms
 from torch.nn.modules.pooling import MaxPool2d
 from torch.nn.modules.activation import ReLU
-import numpy as np
-import matplotlib.pyplot as plt
 from pathlib import Path
-from PIL import Image
-from timeit import default_timer as timer
 
 app = Flask(__name__)
 
 cap = cv2.VideoCapture(0)
 
-def gen_frames():
+def fruitmodel():
 
     data_path = Path("/Users/waqwaq/Python Projects/Pytorch/Fruit Detection Model/")
     train_dir = data_path / "train"
@@ -105,7 +101,7 @@ def gen_frames():
     loaded_model_0.load_state_dict(torch.load(f=MODEL_SAVE_PATH)) 
 
     while True:
-        ret, frame = cap.read()  # read the camera frame
+        ret, frame = cap.read()
 
         resized_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
         resized_frame = cv2.resize(resized_frame, (64, 64))
@@ -118,7 +114,7 @@ def gen_frames():
         conf = pred_class[0][pred]
         classification = class_names[pred]
 
-        cv2.putText(frame, "Predicted Class: " + str(classification) 
+        cv2.putText(frame, "Fruit: " + str(classification) 
                     + " Confidence: " + str(f"{conf * 1000:.0f}%"), (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 2, (0, 0, 0), 3)
         
         if not ret:
@@ -146,7 +142,7 @@ def getworld():
 
 @app.route('/video_feed')
 def video_feed():
-    return Response(gen_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
+    return Response(fruitmodel(), mimetype='multipart/x-mixed-replace; boundary=frame')
 
 if __name__ == '__main__':
     app.run(port=3000,debug=True)
