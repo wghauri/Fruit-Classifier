@@ -5,10 +5,7 @@ from torch.utils.data import DataLoader
 from torchvision import datasets, transforms
 from torch.nn.modules.pooling import MaxPool2d
 from torch.nn.modules.activation import ReLU
-import numpy as np
-import matplotlib.pyplot as plt
 from pathlib import Path
-from PIL import Image
 from timeit import default_timer as timer
 
 data_path = Path("/Users/waqwaq/Python Projects/Pytorch/Fruit Detection Model/")
