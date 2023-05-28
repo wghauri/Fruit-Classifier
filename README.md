@@ -1,4 +1,4 @@
-# Fruit-Classifier
+# Fruit Classifier
 
 This project is designed to predict and identify a fruit based on the camera frames.
 For training the model, the images were transformed in various ways and were put
